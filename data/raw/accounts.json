@@ -1,0 +1,282 @@
+[
+  {
+    "account_id": "ACC001",
+    "customer_id": "C001",
+    "account_type": "CHECKING",
+    "country": "US",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC002",
+    "customer_id": "C002",
+    "account_type": "CHECKING",
+    "country": "GB",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC003",
+    "customer_id": "C003",
+    "account_type": "CHECKING",
+    "country": "DE",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC004",
+    "customer_id": "C004",
+    "account_type": "CHECKING",
+    "country": "SG",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC005",
+    "customer_id": "C005",
+    "account_type": "CHECKING",
+    "country": "CA",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC006",
+    "customer_id": "C006",
+    "account_type": "CHECKING",
+    "country": "US",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC007",
+    "customer_id": "C007",
+    "account_type": "CHECKING",
+    "country": "GB",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC008",
+    "customer_id": "C008",
+    "account_type": "CHECKING",
+    "country": "DE",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC009",
+    "customer_id": "C009",
+    "account_type": "CHECKING",
+    "country": "SG",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC010",
+    "customer_id": "C010",
+    "account_type": "CHECKING",
+    "country": "CA",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC011",
+    "customer_id": "C011",
+    "account_type": "CHECKING",
+    "country": "US",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC012",
+    "customer_id": "C012",
+    "account_type": "CHECKING",
+    "country": "GB",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC013",
+    "customer_id": "C013",
+    "account_type": "CHECKING",
+    "country": "DE",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC014",
+    "customer_id": "C014",
+    "account_type": "CHECKING",
+    "country": "SG",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC015",
+    "customer_id": "C015",
+    "account_type": "CHECKING",
+    "country": "CA",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC016",
+    "customer_id": "C016",
+    "account_type": "CHECKING",
+    "country": "US",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC017",
+    "customer_id": "C017",
+    "account_type": "CHECKING",
+    "country": "GB",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC018",
+    "customer_id": "C018",
+    "account_type": "CHECKING",
+    "country": "DE",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC019",
+    "customer_id": "C019",
+    "account_type": "CHECKING",
+    "country": "SG",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC020",
+    "customer_id": "C020",
+    "account_type": "CHECKING",
+    "country": "CA",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC021",
+    "customer_id": "C021",
+    "account_type": "CHECKING",
+    "country": "US",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC022",
+    "customer_id": "C022",
+    "account_type": "CHECKING",
+    "country": "GB",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC023",
+    "customer_id": "C023",
+    "account_type": "CHECKING",
+    "country": "DE",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC024",
+    "customer_id": "C024",
+    "account_type": "CHECKING",
+    "country": "SG",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC025",
+    "customer_id": "C025",
+    "account_type": "CHECKING",
+    "country": "CA",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC026",
+    "customer_id": "C001",
+    "account_type": "CHECKING",
+    "country": "US",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC027",
+    "customer_id": "C002",
+    "account_type": "CHECKING",
+    "country": "GB",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC028",
+    "customer_id": "C003",
+    "account_type": "CHECKING",
+    "country": "DE",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC029",
+    "customer_id": "C004",
+    "account_type": "CHECKING",
+    "country": "SG",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC030",
+    "customer_id": "C005",
+    "account_type": "CHECKING",
+    "country": "CA",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC031",
+    "customer_id": "C006",
+    "account_type": "CHECKING",
+    "country": "US",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC032",
+    "customer_id": "C007",
+    "account_type": "CHECKING",
+    "country": "GB",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC033",
+    "customer_id": "C008",
+    "account_type": "CHECKING",
+    "country": "DE",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC034",
+    "customer_id": "C009",
+    "account_type": "CHECKING",
+    "country": "SG",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC035",
+    "customer_id": "C010",
+    "account_type": "CHECKING",
+    "country": "CA",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC036",
+    "customer_id": "C011",
+    "account_type": "CHECKING",
+    "country": "US",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC037",
+    "customer_id": "C012",
+    "account_type": "CHECKING",
+    "country": "GB",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC038",
+    "customer_id": "C013",
+    "account_type": "CHECKING",
+    "country": "DE",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC039",
+    "customer_id": "C014",
+    "account_type": "CHECKING",
+    "country": "SG",
+    "status": "ACTIVE"
+  },
+  {
+    "account_id": "ACC040",
+    "customer_id": "C015",
+    "account_type": "CHECKING",
+    "country": "CA",
+    "status": "ACTIVE"
+  }
+]

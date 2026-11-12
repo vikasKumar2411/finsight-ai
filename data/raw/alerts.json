@@ -1,0 +1,54 @@
+[
+  {
+    "alert_id": "ALERT001",
+    "alert_type": "LARGE_TRANSFER",
+    "account_id": "ACC001",
+    "trigger_transaction_ids": [
+      "TX00489"
+    ],
+    "status": "OPEN"
+  },
+  {
+    "alert_id": "ALERT002",
+    "alert_type": "RAPID_FUND_MOVEMENT",
+    "account_id": "ACC003",
+    "trigger_transaction_ids": [
+      "TX00490",
+      "TX00491",
+      "TX00492",
+      "TX00493"
+    ],
+    "status": "OPEN"
+  },
+  {
+    "alert_id": "ALERT003",
+    "alert_type": "CIRCULAR_TRANSFERS",
+    "account_id": "ACC008",
+    "trigger_transaction_ids": [
+      "TX00494",
+      "TX00495",
+      "TX00496"
+    ],
+    "status": "OPEN"
+  },
+  {
+    "alert_id": "ALERT004",
+    "alert_type": "CROSS_BORDER_ACTIVITY",
+    "account_id": "ACC011",
+    "trigger_transaction_ids": [
+      "TX00497",
+      "TX00498",
+      "TX00499"
+    ],
+    "status": "OPEN"
+  },
+  {
+    "alert_id": "ALERT005",
+    "alert_type": "UNUSUAL_TRANSFER",
+    "account_id": "ACC001",
+    "trigger_transaction_ids": [
+      "TX00500"
+    ],
+    "status": "OPEN"
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "alert_id": "ALERT001",
+    "scenario": "LARGE_TRANSFER",
+    "expected_transaction_ids": [
+      "TX00489"
+    ],
+    "expected_outcome": "REQUIRES_INVESTIGATION"
+  },
+  {
+    "alert_id": "ALERT002",
+    "scenario": "RAPID_FUND_MOVEMENT",
+    "expected_transaction_ids": [
+      "TX00490",
+      "TX00491",
+      "TX00492",
+      "TX00493"
+    ],
+    "expected_outcome": "REQUIRES_INVESTIGATION"
+  },
+  {
+    "alert_id": "ALERT003",
+    "scenario": "CIRCULAR_TRANSFERS",
+    "expected_transaction_ids": [
+      "TX00494",
+      "TX00495",
+      "TX00496"
+    ],
+    "expected_outcome": "REQUIRES_INVESTIGATION"
+  },
+  {
+    "alert_id": "ALERT004",
+    "scenario": "CROSS_BORDER_ACTIVITY",
+    "expected_transaction_ids": [
+      "TX00497",
+      "TX00498",
+      "TX00499"
+    ],
+    "expected_outcome": "REQUIRES_INVESTIGATION"
+  },
+  {
+    "alert_id": "ALERT005",
+    "scenario": "UNUSUAL_TRANSFER",
+    "expected_transaction_ids": [
+      "TX00500"
+    ],
+    "expected_outcome": "BENIGN_EXPLANATION_TO_VERIFY"
+  }
+]

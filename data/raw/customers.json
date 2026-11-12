@@ -1,0 +1,177 @@
+[
+  {
+    "customer_id": "C001",
+    "name": "Synthetic Customer 1",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C002",
+    "name": "Synthetic Customer 2",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C003",
+    "name": "Synthetic Customer 3",
+    "customer_type": "Business",
+    "country": "US",
+    "risk_rating": "MEDIUM"
+  },
+  {
+    "customer_id": "C004",
+    "name": "Synthetic Customer 4",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C005",
+    "name": "Synthetic Customer 5",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C006",
+    "name": "Synthetic Customer 6",
+    "customer_type": "Business",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C007",
+    "name": "Synthetic Customer 7",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C008",
+    "name": "Synthetic Customer 8",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C009",
+    "name": "Synthetic Customer 9",
+    "customer_type": "Business",
+    "country": "US",
+    "risk_rating": "MEDIUM"
+  },
+  {
+    "customer_id": "C010",
+    "name": "Synthetic Customer 10",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C011",
+    "name": "Synthetic Customer 11",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C012",
+    "name": "Synthetic Customer 12",
+    "customer_type": "Business",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C013",
+    "name": "Synthetic Customer 13",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C014",
+    "name": "Synthetic Customer 14",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C015",
+    "name": "Synthetic Customer 15",
+    "customer_type": "Business",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C016",
+    "name": "Synthetic Customer 16",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C017",
+    "name": "Synthetic Customer 17",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "MEDIUM"
+  },
+  {
+    "customer_id": "C018",
+    "name": "Synthetic Customer 18",
+    "customer_type": "Business",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C019",
+    "name": "Synthetic Customer 19",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "MEDIUM"
+  },
+  {
+    "customer_id": "C020",
+    "name": "Synthetic Customer 20",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "MEDIUM"
+  },
+  {
+    "customer_id": "C021",
+    "name": "Synthetic Customer 21",
+    "customer_type": "Business",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C022",
+    "name": "Synthetic Customer 22",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "LOW"
+  },
+  {
+    "customer_id": "C023",
+    "name": "Synthetic Customer 23",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "MEDIUM"
+  },
+  {
+    "customer_id": "C024",
+    "name": "Synthetic Customer 24",
+    "customer_type": "Business",
+    "country": "US",
+    "risk_rating": "MEDIUM"
+  },
+  {
+    "customer_id": "C025",
+    "name": "Synthetic Customer 25",
+    "customer_type": "Individual",
+    "country": "US",
+    "risk_rating": "MEDIUM"
+  }
+]
