@@ -56,8 +56,7 @@ def create_transaction_agent(
         # 3. Return partial state update
         return {
             "transactions": transactions,
-            "findings": findings,
-            "status": "TRANSACTION_ANALYSIS_COMPLETED",
+            "findings": findings
         }
 
     return transaction_agent
