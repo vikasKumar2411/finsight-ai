@@ -57,6 +57,7 @@ async def main():
         "account_id": alert["account_id"],
         "status": "PENDING",
         "related_accounts": [],
+        "assessment": None,
         "transactions": [],
         "findings": [],
         "errors": [],
@@ -76,6 +77,9 @@ async def main():
 
     print("\nRelated Accounts:")
     print(json.dumps(final_state["related_accounts"], indent=2))
+
+    print("\nPreliminary Assessment:")
+    print(json.dumps(final_state["assessment"], indent=2))
 
     print("\nExecution Budget:")
     print(budget_manager.get_budget(investigation_id))

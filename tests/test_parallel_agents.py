@@ -51,7 +51,7 @@ def test_parallel_agents_share_state_and_budget():
         graph.ainvoke(make_initial_state(investigation_id))
     )
 
-    assert final_state["status"] == "INITIAL_ANALYSIS_COMPLETED"
+    assert final_state["status"] == "EVIDENCE_EVALUATION_COMPLETED"
 
     # Verify Transaction Agent findings.
     assert any(

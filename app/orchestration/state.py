@@ -22,3 +22,5 @@ class InvestigationState(TypedDict):
         list[str],
         operator.add,
     ]
+
+    assessment: dict[str, Any] | None
