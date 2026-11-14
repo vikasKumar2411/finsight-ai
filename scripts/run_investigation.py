@@ -10,7 +10,7 @@ from app.tools.gateway import ToolGateway
 from app.tools.security.authorization import ToolAuthorizer
 from app.tools.execution.budget import ExecutionBudgetManager
 from app.tools.telemetry import ToolTelemetry
-
+from app.planning.planner import InvestigationPlanner
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -48,7 +48,29 @@ async def main():
     )
 
     # 4. Build LangGraph
-    graph = build_investigation_graph(gateway)
+    # Generate an investigation plan using local Ollama
+    planner = InvestigationPlanner()
+
+    alert_description = alert.get(
+        "description",
+        f"Investigate financial alert {alert['alert_id']} "
+        f"for account {alert['account_id']}.",
+    )
+
+    plan = await planner.create_plan(
+        investigation_id=investigation_id,
+        alert_id=alert["alert_id"],
+        alert_description=alert_description,
+    )
+
+    print("\n=== LLM INVESTIGATION PLAN ===")
+    print(json.dumps(plan.model_dump(mode="json"), indent=2))
+
+    # Construct LangGraph using the selected capabilities
+    graph = build_investigation_graph(
+        gateway=gateway,
+        plan=plan,
+    )
 
     # 5. Construct initial investigation state
     initial_state = {
