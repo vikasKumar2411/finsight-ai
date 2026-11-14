@@ -43,6 +43,7 @@ def create_entity_agent(gateway: ToolGateway):
         return {
             "related_accounts": related_accounts,
             "findings": findings,
+            "completed_capabilities": ["entity_investigation"],
         }
 
     return entity_agent

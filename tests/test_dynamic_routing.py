@@ -81,17 +81,29 @@ def test_transaction_only_routing():
     result = asyncio.run(graph.ainvoke(make_state()))
 
     assert result["status"] == "EVIDENCE_EVALUATION_COMPLETED"
+
     assert len(result["transactions"]) > 0
-    assert result["related_accounts"] == []
+
+    # The Supervisor detected the large transfer
+    # and requested Entity Investigation.
+    assert set(result["related_accounts"]) == {
+        "ACC002",
+        "ACC003",
+    }
+
+    assert result["supervisor_rounds"] == 2
 
     assert budget.get_budget(
         INVESTIGATION_ID
-    ).tool_calls_used == 1
+    ).tool_calls_used == 2
 
     assert {
         event.agent_id
         for event in telemetry.get_events()
-    } == {"transaction_agent"}
+    } == {
+        "transaction_agent",
+        "entity_agent",
+    }
 
 
 def test_entity_only_routing():

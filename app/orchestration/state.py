@@ -7,7 +7,6 @@ class InvestigationState(TypedDict):
     investigation_id: str
     alert_id: str
     account_id: str
-
     status: str
 
     transactions: list[dict[str, Any]]
@@ -24,3 +23,15 @@ class InvestigationState(TypedDict):
     ]
 
     assessment: dict[str, Any] | None
+
+    # Agent execution history
+    completed_capabilities: Annotated[
+        list[str],
+        operator.add,
+    ]
+
+    # Number of supervisor evaluations
+    supervisor_rounds: int
+
+    # Next agent selected by supervisor, if any
+    next_agent: str | None

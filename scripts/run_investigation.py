@@ -83,6 +83,9 @@ async def main():
         "transactions": [],
         "findings": [],
         "errors": [],
+        "completed_capabilities": [],
+        "supervisor_rounds": 0,
+        "next_agent": None,
     }
 
     # 6. Execute investigation
@@ -109,6 +112,14 @@ async def main():
     print("\nTool Telemetry:")
     for event in telemetry.get_events():
         print(event)
+
+    print("\nSupervisor Summary:")
+    print("Rounds:", final_state["supervisor_rounds"])
+    print(
+        "Completed capabilities:",
+        final_state["completed_capabilities"],
+    )
+    print("Next agent:", final_state["next_agent"])
 
 
 if __name__ == "__main__":

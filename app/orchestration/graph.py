@@ -3,12 +3,18 @@ from langgraph.graph import StateGraph, START, END
 
 from app.orchestration.state import InvestigationState
 
+from app.orchestration.supervisor import (
+    create_supervisor,
+)
+
 from app.agents.transaction_agent import (
     create_transaction_agent,
 )
+
 from app.agents.entity_agent import (
     create_entity_agent,
 )
+
 from app.agents.evidence_evaluator import (
     evaluate_evidence,
 )
@@ -24,6 +30,7 @@ from app.tools.gateway import ToolGateway
 def finalize_investigation(
     state: InvestigationState,
 ) -> dict:
+
     return {
         "status": "EVIDENCE_EVALUATION_COMPLETED",
     }
@@ -32,17 +39,16 @@ def finalize_investigation(
 def build_investigation_graph(
     gateway: ToolGateway,
     plan: InvestigationPlan | None = None,
+    max_supervisor_rounds: int = 2,
 ):
     """
-    Build a plan-driven investigation graph.
-
-    When plan is None, retain the original
-    two-agent behavior for compatibility.
+    Build an investigation graph with a bounded
+    supervisor feedback loop.
     """
 
     builder = StateGraph(InvestigationState)
 
-    # 1. Register investigation agents
+    # Register nodes
     builder.add_node(
         "transaction_analysis",
         create_transaction_agent(gateway),
@@ -59,11 +65,16 @@ def build_investigation_graph(
     )
 
     builder.add_node(
+        "supervisor",
+        create_supervisor(max_supervisor_rounds),
+    )
+
+    builder.add_node(
         "finalize",
         finalize_investigation,
     )
 
-    # 2. Validate the plan against trusted graph input
+    # Validate trusted plan identifiers
     def validate_plan(state: InvestigationState) -> dict:
         if plan is not None:
             if plan.investigation_id != state["investigation_id"]:
@@ -78,13 +89,10 @@ def build_investigation_graph(
 
         return {"status": "PLAN_VALIDATED"}
 
-    builder.add_node(
-        "validate_plan",
-        validate_plan,
-    )
+    builder.add_node("validate_plan", validate_plan)
 
-    # 3. Decide which agents execute
-    def route_agents(
+    # Initial agent selection
+    def route_initial_agents(
         state: InvestigationState,
     ) -> list[str]:
 
@@ -115,25 +123,36 @@ def build_investigation_graph(
 
         if not destinations:
             raise ValueError(
-                "Investigation plan selected no executable agents"
+                "No executable capabilities selected"
             )
 
         return destinations
 
-    # 4. Start with plan validation
+    # Supervisor routing decision
+    def route_after_supervisor(
+        state: InvestigationState,
+    ) -> str:
+
+        next_agent = state.get("next_agent")
+
+        if next_agent == "entity_investigation":
+            return "entity_investigation"
+
+        return "finalize"
+
+    # Start the workflow
     builder.add_edge(START, "validate_plan")
 
-    # 5. Route to selected agents
     builder.add_conditional_edges(
         "validate_plan",
-        route_agents,
+        route_initial_agents,
         {
             "transaction_analysis": "transaction_analysis",
             "entity_investigation": "entity_investigation",
         },
     )
 
-    # 6. Both possible branches lead to evaluation
+    # Collect evidence from whichever agents execute.
     builder.add_edge(
         "transaction_analysis",
         "evidence_evaluation",
@@ -144,10 +163,20 @@ def build_investigation_graph(
         "evidence_evaluation",
     )
 
-    # 7. Finalize
+    # Evaluate, then let the supervisor decide.
     builder.add_edge(
         "evidence_evaluation",
-        "finalize",
+        "supervisor",
+    )
+
+    # Loop for more evidence or finish.
+    builder.add_conditional_edges(
+        "supervisor",
+        route_after_supervisor,
+        {
+            "entity_investigation": "entity_investigation",
+            "finalize": "finalize",
+        },
     )
 
     builder.add_edge("finalize", END)
